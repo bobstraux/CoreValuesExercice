@@ -527,24 +527,35 @@ body {
 
     <!-- Script -->
     <script>
-        const nextBtn = document.querySelector(".nav-btn.next");
-const restBtn = document.querySelector(".nav-btn.rest");
+const nextBtn = document.querySelector(".nav-btn.next");
+const resetBtn = document.querySelector(".nav-btn.reset");
 const listOptions = document.querySelectorAll(".value-checkbox");
-let stepsCounter = 0;
+let stepsCounter = 1;
+let maxSelection = 11;
 
-for (const option of listOptions) {
-  option.addEventListener("click", function (e) {
-    let maxSelectionCheck = document.querySelectorAll(
-      ".value-checkbox:checked"
-    );
+resetBtn.addEventListener("click", function (e) {
+  e.preventDefault();
 
-    if (maxSelectionCheck.length >= 11) {
-      e.preventDefault();
+  location.reload();
+});
 
-      return false;
-    }
-  });
+function limitSelection(max) {
+  for (const option of listOptions) {
+    option.addEventListener("click", function (e) {
+      let maxSelectionCheck = document.querySelectorAll(
+        ".value-checkbox:checked"
+      );
+
+      if (maxSelectionCheck.length >= max) {
+        e.preventDefault();
+
+        return false;
+      }
+    });
+  }
 }
+
+limitSelection(maxSelection);
 
 nextBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -552,7 +563,8 @@ nextBtn.addEventListener("click", function (e) {
     ".value-checkbox:not(:checked)"
   );
   let selectedValues = document.querySelectorAll(".value-checkbox:checked");
-  if (stepsCounter < 3) {
+
+  if (stepsCounter === 1) {
     for (const unchecked of unselectedValues) {
       unchecked.parentNode.parentNode.classList.add("hide");
     }
@@ -560,8 +572,36 @@ nextBtn.addEventListener("click", function (e) {
       checked.checked = false;
     }
     stepsCounter++;
-  } else {
+    maxSelection = 6;
+    limitSelection(maxSelection);
+
+    return;
+  }
+  if (stepsCounter === 2) {
+    for (const unchecked of unselectedValues) {
+      unchecked.parentNode.parentNode.classList.add("hide");
+    }
+    for (const checked of selectedValues) {
+      checked.checked = false;
+    }
+    stepsCounter++;
+    maxSelection = 4;
+    limitSelection(maxSelection);
+
+    return;
+  }
+  if (stepsCounter === 3) {
+    for (const unchecked of unselectedValues) {
+      unchecked.parentNode.parentNode.classList.add("hide");
+    }
+    for (const checked of selectedValues) {
+      checked.checked = false;
+    }
+    stepsCounter++;
+    maxSelection = 0;
+    limitSelection(maxSelection);
     nextBtn.classList.add("hide");
+    return;
   }
 });
 
