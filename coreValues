@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Core Values</title>
+    
+<!--    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> -->
+    <style>
+        html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+
+/* VALUE LIST OPTIONS */
+.value-list-container{
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #c7e5f2;
+  padding: 20px;
+  border-radius: 10px;
+
+
+ 
+
+  justify-content: space-between;
+}
+
+.value-list-container div {
+  /* margin-bottom: 1rem; */
+  min-width: 150px;
+  flex-grow: 1;
+}
+
+.container{
+  margin: 0 auto;
+  width: 900px;
+}
+.nav-container{
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+
+
+
+.value-list-container label span{
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: default;
+  padding: .4rem 1.4rem;
+  background-color: #ffffff;
+  border-radius: 200px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.value-list-container label input[type="checkbox"] {
+  display: none
+}
+
+.value-list-container label input[type="checkbox"]:checked ~ span {
+  background-color: #0ab2fa;
+  color: white;
+  transition: all .3s;
+}
+
+.nav-btn{
+  padding: 10px 40px;
+  font-size: 1.4rem;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-btn.next{
+  background-color: #0ab2fa;
+  color: white;
+}
+
+.hide{
+  display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="value-list-container">
+        <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Authenticity" name="Authenticity">
+                  <span class="value-option">Authenticity</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Achievement" name="Achievement">
+                  <span class="value-option">Achievement</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Adventure" name="Adventure">
+                  <span class="value-option">Adventure</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Authority" name="Authority">
+                  <span class="value-option">Authority</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Autonomy" name="Autonomy">
+                  <span class="value-option">Autonomy</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Balance" name="Balance">
+                  <span class="value-option">Balance</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Beauty" name="Beauty">
+                  <span class="value-option">Beauty</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Boldness" name="Boldness">
+                  <span class="value-option">Boldness</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Compassion" name="Compassion">
+                  <span class="value-option">Compassion</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Challenge" name="Challenge">
+                  <span class="value-option">Challenge</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Citizenship" name="Citizenship">
+                  <span class="value-option">Citizenship</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Community" name="Community">
+                  <span class="value-option">Community</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Competency" name="Competency">
+                  <span class="value-option">Competency</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Contribution" name="Contribution">
+                  <span class="value-option">Contribution</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Creativity" name="Creativity">
+                  <span class="value-option">Creativity</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Curiosity" name="Curiosity">
+                  <span class="value-option">Curiosity</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Determination" name="Determination">
+                  <span class="value-option">Determination</span>
+              </input>
+          </label>
+      </div>
+      <div>
+        <label>
+            <input  class="value-checkbox" type="checkbox" value="Diversity" name="Diversity">
+                <span class="value-option">Diversity</span>
+            </input>
+        </label>
+    </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Fairness" name="Fairness">
+                  <span class="value-option">Fairness</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Faith" name="Faith">
+                  <span class="value-option">Faith</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Fame" name="Fame">
+                  <span class="value-option">Fame</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Friendships" name="Friendships">
+                  <span class="value-option">Friendships</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Fun" name="Fun">
+                  <span class="value-option">Fun</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Growth" name="Growth">
+                  <span class="value-option">Growth</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Happiness" name="Happiness">
+                  <span class="value-option">Happiness</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Honesty" name="Honesty">
+                  <span class="value-option">Honesty</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Humor" name="Humor">
+                  <span class="value-option">Humor</span>
+              </input>
+          </label>
+      </div>
+      <div>
+        <label>
+            <input  class="value-checkbox" type="checkbox" value="Inclusion" name="Inclusion">
+                <span class="value-option">Inclusion</span>
+            </input>
+        </label>
+    </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Influence" name="Influence">
+                  <span class="value-option">Influence</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Inner Harmony" name="Inner Harmony">
+                  <span class="value-option">Inner Harmony</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Justice" name="Justice">
+                  <span class="value-option">Justice</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Kindness" name="Kindness">
+                  <span class="value-option">Kindness</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Knowledge" name="Knowledge">
+                  <span class="value-option">Knowledge</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Leadership" name="Leadership">
+                  <span class="value-option">Leadership</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Learning" name="Learning">
+                  <span class="value-option">Learning</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Love" name="Love">
+                  <span class="value-option">Love</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Loyalty" name="Loyalty">
+                  <span class="value-option">Loyalty</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Meaningful" name="Meaningful">
+                  <span class="value-option">Meaningful Work</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Openness" name="Openness">
+                  <span class="value-option">Openness</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Optimism" name="Optimism">
+                  <span class="value-option">Optimism</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Peace" name="Peace">
+                  <span class="value-option">Peace</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Pleasure" name="Pleasure">
+                  <span class="value-option">Pleasure</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Poise" name="Poise">
+                  <span class="value-option">Poise</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Popularity" name="Popularity">
+                  <span class="value-option">Popularity</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Recognition" name="Recognition">
+                  <span class="value-option">Recognition</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Religion" name="Religion">
+                  <span class="value-option">Religion</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Reputation" name="Reputation">
+                  <span class="value-option">Reputation</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Respect" name="Respect">
+                  <span class="value-option">Respect</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Responsibility" name="Responsibility">
+                  <span class="value-option">Responsibility</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Security" name="Security">
+                  <span class="value-option">Security</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Self" name="Self">
+                  <span class="value-option">Self-Respect</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Service" name="Service">
+                  <span class="value-option">Service</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Spirituality" name="Spirituality">
+                  <span class="value-option">Spirituality</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Stability" name="Stability">
+                  <span class="value-option">Stability</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Success" name="Success">
+                  <span class="value-option">Success</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Status" name="Status">
+                  <span class="value-option">Status</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Trustworthiness" name="Trustworthiness">
+                  <span class="value-option">Trustworthiness</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Wealth" name="Wealth">
+                  <span class="value-option">Wealth</span>
+              </input>
+          </label>
+      </div>
+      <div>
+          <label>
+              <input  class="value-checkbox" type="checkbox" value="Wisdom" name="Wisdom">
+                  <span class="value-option">Wisdom</span>
+              </input>
+          </label>
+      </div>
+      </div>
+    <div class="nav-container">
+        <button class="nav-btn reset">Rest</button>
+        <button class="nav-btn next">Next</button>
+    </div>
+</div>
+
+    <!-- Script -->
+    <script>
+        const nextBtn = document.querySelector(".nav-btn.next");
+const restBtn = document.querySelector(".nav-btn.rest");
+const listOptions = document.querySelectorAll(".value-checkbox");
+let stepsCounter = 0;
+
+for (const option of listOptions) {
+  option.addEventListener("click", function (e) {
+    let maxSelectionCheck = document.querySelectorAll(
+      ".value-checkbox:checked"
+    );
+
+    if (maxSelectionCheck.length >= 11) {
+      e.preventDefault();
+
+      return false;
+    }
+  });
+}
+
+nextBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  let unselectedValues = document.querySelectorAll(
+    ".value-checkbox:not(:checked)"
+  );
+  let selectedValues = document.querySelectorAll(".value-checkbox:checked");
+  if (stepsCounter < 3) {
+    for (const unchecked of unselectedValues) {
+      unchecked.parentNode.parentNode.classList.add("hide");
+    }
+    for (const checked of selectedValues) {
+      checked.checked = false;
+    }
+    stepsCounter++;
+  } else {
+    nextBtn.classList.add("hide");
+  }
+});
+
+    </script>
+    
+</body>
+</html>
